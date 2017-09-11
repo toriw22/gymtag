@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Buddy Create Account</title>
+<head>
+	<meta charset="UTF-8">
+	<title>Gym Buddy Create Account</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Create a New Account</h1>
+        <h3>To find a gym buddy, please fill out the form below.</h3>
+      </div>
+    <form>
+    	<!-- input questions -->
+    	<label><h2>Name</h2></label>
+    	<input class="form-control form-control-lg nameField" type="text" placeholder="Your Name">
+    	<label><h2>Link to Photo</h2></label>
+    	<input class="form-control form-control-lg photoField" type="text" placeholder="https://i.pinimg.com/236x/0b/49/d4/0b49d43d28c5b76d9a9dd5199b62ad95--real-life-this-my-life.jpg">
+
+    	<!-- dropdown questions -->
+    	<label><h2>Preferred Gym</h2></label>
+	   	<select class="form-control form-control-lg questionOne">
+  			<option>24 Hour Fitness Irvine 18007 Von Karman Ave, Irvine, CA 92612</option>
+        	<option>LA Fitness Irvine 2880 Michelle Dr, Irvine, CA 92606</option>
+		  </select>
+
+	    <label><h2>Availability</h2></label>
+	    <select class="form-control form-control-lg questionTwo">
+	    	<option>Sunday 9/17</option>
+  			<option>Monday 9/18</option>
+	        <option>Tuesday 9/19</option>
+	        <option>Wednesday 9/20</option>
+	        <option>Thursday 9/21</option>
+	        <option>Friday 9/22</option>
+	        <option>Saturday 9/23</option>
+		</select><br>
+		<select class="form-control form-control-lg questionTwo">
+  			<option>1 PM</option>
+        	<option>2 PM</option>
+        	<option>3 PM</option>
+       		<option>4 PM</option>
+        	<option>5 PM</option>
+        	<option>6 PM</option>
+	        <option>7 PM</option>
+	        <option>8 PM</option>
+	        <option>9 PM</option>
+	        <option>10 PM</option>
+	        <option>11 PM</option>
+	        <option>12 PM</option>
+		  </select>
+
+
+	    <label><h2>Trainer or User?</h2></label>
+	    <select class="form-control form-control-lg questionThree">
+  	    <option>Trainer</option>
+        <option>User</option>
+		  </select>
+
+	    <br>
+		<a class="btn btn-primary btn-lg" id="submit" role="button">Submit</a>	   
+
+	</form>
+ 	</div>
+	</div>	
+</body>
+</html>
+
+<script type="text/javascript"> 
+  $("#submit").on("click", function(event){
+    event.preventDefault();
+    var newFriend =  {
+      name: $(".nameField").val().trim(), 
+      photo: $(".photoField").val().trim(),
+      scores: [
+        $(".questionOne").val(), 
+        $(".questionTwo").val(), 
+        $(".questionThree").val(), 
+        $(".questionFour").val(), 
+        $(".questionFive").val(), 
+        $(".questionSix").val(), 
+        $(".questionSeven").val(), 
+        $(".questionEight").val(), 
+        $(".questionNine").val(), 
+        $(".questionTen").val()
+      ]
+    };
+      
+    console.log(newFriend);
+    
+    $.post("/survey", newFriend, function(data){
+        alert("Finding your best match...");
+
+    });
+  });
+</script>

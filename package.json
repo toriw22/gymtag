@@ -1,0 +1,30 @@
+{
+  "name": "gymtag",
+  "version": "1.0.0",
+  "description": "gym application",
+  "main": "server.js",
+  "scripts": {
+    "test": "This works",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gymtag/gymtag.git"
+  },
+  "keywords": [
+    "gym",
+    "app"
+  ],
+  "author": "Garrett Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gymtag/gymtag/issues"
+  },
+  "homepage": "https://github.com/gymtag/gymtag#readme",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "express": "^4.15.4",
+    "mysql2": "^1.4.2",
+    "sequelize": "^4.8.3"
+  }
+}

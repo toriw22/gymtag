@@ -18,20 +18,13 @@ module.exports = function(sequelize, DataTypes) {
        type: DataTypes.STRING,
        allowNull: false
     },
+    photo: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     gym: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-      len: [1]
-      }
-    },
-    zipCode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      isNumeric: true,
-      validate:{
-      len: [5]
-      }
+      allowNull: true
     },
     month: {
       type: DataTypes.STRING,
@@ -49,6 +42,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
+}, {
+      timestamps: false    
   });
     return Member;
 };

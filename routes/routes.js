@@ -13,8 +13,8 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for User viewing their appointments
-  app.get("/user", function(req, res) {
-    db.Table.findAll({
+  app.get("/beginner", function(req, res) {
+    db.Members.findAll({
       where: {
         id: req.body.id
       }
@@ -24,8 +24,8 @@ module.exports = function(app) {
   });
 
     // GET route for Trainer to see all appointments
-  app.get("/trainer", function(req, res) {
-    db.Table.findAll({
+  app.get("/pro", function(req, res) {
+    db.Members.findAll({
       where: {
         id: req.body.id
       }
@@ -39,11 +39,10 @@ module.exports = function(app) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Table.create({
+    db.Members.create({
       name: req.body.name,
       type: req.body.type,
       gym: req.body.gym,
-      zipcode: req.body.zipcode
     }).then(function(results) {
       // We have access to the new todo as an argument inside of the callback function
       res.json(results);
@@ -59,7 +58,7 @@ module.exports = function(app) {
   // req.params.id
   // app.delete("/api/todos/:id", function(req, res) {
   //   // We just have to specify which todo we want to destroy with "where"
-  //   db.Table.destroy({
+  //   db.Members.destroy({
   //     where: {
   //       id: req.params.id
   //     }
@@ -74,7 +73,7 @@ module.exports = function(app) {
 
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
-    db.Table.update({
+    db.Members.update({
       month: req.body.month,
       day: req.body.day,
       time: req.body.time,

@@ -1,65 +1,65 @@
 $(document).ready(function() {
-  // Getting references to the name inout and author container, as well as the table body
-  var nameInput = $("#author-name");
-  var authorList = $("tbody");
-  var authorContainer = $(".author-container");
+  // Getting references to the name inout and member container, as well as the table body
+  var memberInput = $("#member-name");
+  var memberList = $("tbody");
+  var memberContainer = $(".member-container");
   // Adding event listeners to the form to create a new object, and the button to delete
-  // an Author
-  $(document).on("submit", "#author-form", handleAuthorFormSubmit);
-  $(document).on("click", ".delete-author", handleDeleteButtonPress);
+  // an member
+  $(document).on("submit", "#member-form", handleMemberFormSubmit);
+  $(document).on("click", ".delete-member", handleDeleteButtonPress);
 
-  // Getting the intiial list of Authors
-  getAuthors();
+  // Getting the intiial list of members
+  getMembers();
 
-  // A function to handle what happens when the form is submitted to create a new Author
-  function handleAuthorFormSubmit(event) {
+  // A function to handle what happens when the form is submitted to create a new members
+  function handleMemberFormSubmit(event) {
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
-    if (!nameInput.val().trim().trim()) {
+    if (!memberInput.val().trim().trim()) {
       return;
     }
-    // Calling the upsertAuthor function and passing in the value of the name input
-    upsertAuthor({
-      name: nameInput
+    // Calling the upsertMember function and passing in the value of the name input
+    upsertMember({
+      name: memberInput
         .val()
         .trim()
     });
   }
 
-  // A function for creating an author. Calls getAuthors upon completion
-  function upsertAuthor(authorData) {
-    $.post("/api/authors", authorData)
-      .then(getAuthors);
+  // A function for creating an member. Calls getMembers upon completion
+  function upsertMember(memberData) {
+    $.post("/api/member", memberData)
+      .then(getMembers);
   }
 
-  // Function for creating a new list row for authors
-  function createAuthorRow(authorData) {
+  // Function for creating a new list row for members
+  function createMemberRow(memberData) {
     var newTr = $("<tr>");
-    newTr.data("author", authorData);
-    newTr.append("<td>" + authorData.name + "</td>");
-    newTr.append("<td> " + authorData.Posts.length + "</td>");
-    newTr.append("<td><a href='/blog?author_id=" + authorData.id + "'>Go to Posts</a></td>");
-    newTr.append("<td><a href='/cms?author_id=" + authorData.id + "'>Create a Post</a></td>");
-    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>");
+    newTr.data("member", memberData);
+    newTr.append("<td>" + member.name + "</td>");
+    newTr.append("<td> " + memberData.Posts.length + "</td>");
+    newTr.append("<td><a href='/blog?member_id=" + memberData.id + "'>Go to Posts</a></td>");
+    newTr.append("<td><a href='/cms?member_id=" + memberData.id + "'>Create a Post</a></td>");
+    newTr.append("<td><a style='cursor:pointer;color:red' class='delete-member'>Delete Member</a></td>");
     return newTr;
   }
 
-  // Function for retrieving authors and getting them ready to be rendered to the page
-  function getAuthors() {
-    $.get("/api/authors", function(data) {
+  // Function for retrieving members and getting them ready to be rendered to the page
+  function getMembers() {
+    $.get("/api/member", function(data) {
       var rowsToAdd = [];
       for (var i = 0; i < data.length; i++) {
-        rowsToAdd.push(createAuthorRow(data[i]));
+        rowsToAdd.push(createMemberRow(data[i]));
       }
-      renderAuthorList(rowsToAdd);
-      nameInput.val("");
+      renderMemberList(rowsToAdd);
+      memberInput.val("");
     });
   }
 
-  // A function for rendering the list of authors to the page
-  function renderAuthorList(rows) {
-    authorList.children().not(":last").remove();
-    authorContainer.children(".alert").remove();
+  // A function for rendering the list of members to the page
+  function renderMemberList(rows) {
+    memberList.children().not(":last").remove();
+    memberContainer.children(".alert").remove();
     if (rows.length) {
       console.log(rows);
       authorList.prepend(rows);
@@ -69,22 +69,22 @@ $(document).ready(function() {
     }
   }
 
-  // Function for handling what to render when there are no authors
+  // Function for handling what to render when there are no members
   function renderEmpty() {
     var alertDiv = $("<div>");
     alertDiv.addClass("alert alert-danger");
-    alertDiv.html("You must create an Author before you can create a Post.");
-    authorContainer.append(alertDiv);
+    alertDiv.html("You must create an Member Login before you can create a Post.");
+    memberContainer.append(alertDiv);
   }
 
   // Function for handling what happens when the delete button is pressed
   function handleDeleteButtonPress() {
-    var listItemData = $(this).parent("td").parent("tr").data("author");
+    var listItemData = $(this).parent("td").parent("tr").data("member");
     var id = listItemData.id;
     $.ajax({
       method: "DELETE",
-      url: "/api/authors/" + id
+      url: "/api/member/" + id
     })
-    .done(getAuthors);
+    .done(getMembers);
   }
 });

@@ -13,23 +13,28 @@ module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  app.get("/index", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  // new route loads new.html
+  app.get("/new", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/new.html"));
   });
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  // login route loads login.html
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  // authors route loads author-manager.html
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+  // user route loads user.html
+  app.get("/user", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
+  });
+
+    // trainer route loads trainer.html
+  app.get("/trainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/trainer.html"));
   });
 
 };

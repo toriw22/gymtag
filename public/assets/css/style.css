@@ -1,3 +1,56 @@
+<<<<<<< HEAD
+button.submit {
+	float: right;
+  }
+  
+  form#cms {
+	margin-top: 50px;
+  }
+  
+  #cms textarea {
+	resize: none;
+  }
+  
+  .panel-heading button.delete,
+  button.edit {
+	float: right;
+	margin: 5px;
+  }
+  
+  .author-container {
+	margin-top: 50px;
+  }
+  
+  .author-list {
+	margin-top: 25px;
+  }
+  
+  .blog-container {
+	margin-top: 30px;
+  }
+  
+  .blog {
+	margin-top: 30px;
+  }
+  
+  .hidden {
+	display: none;
+  }
+  
+  #author-name {
+	width: 100%;
+	height: 35px;
+	margin-top: 5px;
+  }
+  
+  .top-30 {
+	margin-top: 30px;
+  }
+  
+  .jumbotron {
+	  text-align: center;
+  }
+=======
 .container {
 	background-color: white;
 	color: grey;
@@ -141,3 +194,4 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
+>>>>>>> 77b2f530100d95d045c557713d9a9b0117f05741

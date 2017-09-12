@@ -73,11 +73,24 @@ h3 {
 	text-align: center;
 }
 
-.jumbotron {
+.jumbotron.index {
 	background-color: black;
 	color: white;
 	opacity: 0.8;
 }
+
+.jumbotron.form {
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+.jumbotron.view {
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
 
 body {
 	background-repeat: no-repeat;

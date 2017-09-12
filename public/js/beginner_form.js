@@ -29,14 +29,14 @@ $(document).ready(function() {
 
   // A function for creating an member. Calls getMembers upon completion
   function upsertMember(memberData) {
-    $.post("/api/user", memberData)
+    $.post("/user", memberData)
       .then(getMembers);
   }
 
 
   // Function for retrieving members and getting them ready to be rendered to the page
   function getMembers() {
-    $.get("/api/member", function(data) {
+    $.get("/user", function(data) {
       var rowsToAdd = [];
       for (var i = 0; i < data.length; i++) {
         rowsToAdd.push(createMemberRow(data[i]));

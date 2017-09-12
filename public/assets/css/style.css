@@ -1,3 +1,143 @@
-.jumbotron {
+.container {
+	background-color: white;
+	color: grey;
+	opacity: 0.9;
+}
+
+.container.newUserOrLogin {
+	width: 300px;
+	height: 100px;
+	margin-top: 60px;
+}
+
+.container.loginInput {
+	width: 275px;
+	height: 150px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.login {
+	margin-top: 60px;
+	width: 300px;
+	height: 300px;
+}
+
+.loginLabel {
+	font-family: inherit;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 25px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.form-control.username {
+    width: 238px;
+}
+
+.form-control.password {
+    width: 238px;
+}
+
+.container.newUser {
+	width: 76%;
+	height: 685px;
+	margin-bottom: 60px;
+	margin-top: 60px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.container.viewAndUpdate {
+	width: 76%;
+	height: 345px;
+	margin-top: 60px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+	position: relative;
+	top: 28px;
+    margin-left: 20px;
+    margin-right: 14px;
+}
+
+h1 {
 	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+.jumbotron {
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: 100%
+}
+
+body.form { 
+	background-image: url("../images/gymbuddy.png");
+}
+
+body.index {
+	background-image: url("../images/gymbuddy3.jpg");
+}
+
+body.view {
+	background-image: url("../images/gymbuddy2.jpg");
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.panel-heading button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.author-container {
+  margin-top: 50px;
+}
+
+.author-list {
+  margin-top: 25px;
+}
+
+.blog-container {
+  margin-top: 30px;
+}
+
+.blog {
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+#author-name {
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.top-30 {
+  margin-top: 30px;
 }

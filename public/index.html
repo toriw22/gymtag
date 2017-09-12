@@ -6,21 +6,38 @@
 	<title>Gym Buddy</title>
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+	<link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
-<div class="jumbotron">
+<div class="jumbotron index">
   <h1>Gym Buddy</h1>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Create New Account</a>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Login</a></p>
 </div>
 
 
-<body>
+<body class="index">
+	<div class="container newUserOrLogin">
+		<div class="container loginInput">
+			<label class="loginLabel">Username</label>
+    		<input class="form-control form-control-lg" type="text">
+    		<label class="loginLabel">Password</label>
+    		<input class="form-control form-control-lg" type="text"></div>
+    	<p><a class="btn btn-primary btn-lg 	newUserButton" href="form.html" role="button">New User</a>
+	  		<a class="btn btn-primary btn-lg loginButton" href="#" role="button">Login</a>
+	  	</p>
+  	</div>
 
-	<script src="js/view.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(".loginInput").hide();
+		$(".loginButton").on("click", function(event){
+	    event.preventDefault();
+		   	$(".newUserButton").hide();
+		   	$(".loginInput").show();
+		   	$(".newUserOrLogin").addClass("login");
+		   	$(".login").removeClass("newUserOrLogin");
+	  });
+</script>
 
 </body>
 

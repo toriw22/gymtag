@@ -41,21 +41,28 @@
     width: 238px;
 }
 
-.container.newUser {
+.container.main {
 	width: 76%;
-	height: 685px;
 	margin-bottom: 60px;
 	margin-top: 60px;
 	padding-left: 25px;
 	padding-right: 25px;
 }
 
+.container.newUser {
+	height: 535px;
+}
+
 .container.viewAndUpdate {
-	width: 76%;
 	height: 345px;
-	margin-top: 60px;
-	padding-left: 25px;
-	padding-right: 25px;
+}
+
+.container.viewAndUpdate {
+	height: 345px;
+}
+
+.container.mapAndSchedule {
+	height: 345px;
 }
 
 .btn-group-lg>.btn, .btn-lg{
@@ -91,6 +98,12 @@ h3 {
 	opacity: 0.8;
 }
 
+.jumbotron.userAccount {
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
 
 body {
 	background-repeat: no-repeat;
@@ -109,6 +122,10 @@ body.index {
 
 body.view {
 	background-image: url("../images/gymbuddy2.jpg");
+}
+
+body.user {
+	background-image: url("../images/workout-partner.jpg");
 }
 
 form#cms {

@@ -9,28 +9,22 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
-<body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="">
-            GymBuds
-        </a>
-        
-    </nav>
-    <div class="jumbotron jumbotron-fluid header">
-        <div class="container">
+<body class= "user">
+  <!--   <a class="navbar-brand" href="#">
+            <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="GymBuds">
+            
+        </a> -->
+    <div class="jumbotron jumbotron-fluid userAccount">
             <h1 class="display-1">User Account</h1>
-            <p class="lead">Welcome to Gym Buddy. View your account details below!</p>
-        </div>
+            <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="GymBuds"/>
+
     </div>
-    <div class = "container">
+    <div class = "container main mapAndShedule">
         <div class = "row">
             <div class = "col-md-12">
                 <h1 class="display-3">My Reservations</h1>
             </div>
         </div>
-    </div>
-    <div class = "container">
         <div class = "row">
             <div class = "col-md-12">
                 <h1 class="display-3">Choose A Gym Near You</h1>
@@ -70,16 +64,12 @@
                         <span id="place-address"></span>
                     </div>
             </div>
-        </div>
-    </div>
-    <div class = "container">
+        </div>  
         <div class = "row">
             <div class = "col-md-12">
                 <h1 class="display-3">Schedule A Workout</h1>
             </div>
         </div>
-    </div>
-    <div class = "container">
         <form>
             <div class="form-group">
                 <label for="gymId">Gym ID</label>
@@ -162,11 +152,6 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted">@garrettmoore</p>
-        </div>
-    </footer>
 
     <script src="js/user.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places&callback=initMap"

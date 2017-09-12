@@ -45,8 +45,8 @@ $(document).ready(function() {
   }
 
   // Function for retrieving members and getting them ready to be rendered to the page
-  function getMembers() {
-    $.get("/api/member", function(data) {
+  function beginnerWorkout() {
+    $.get("/api/beginner", function(data) {
       var rowsToAdd = [];
       for (var i = 0; i < data.length; i++) {
         rowsToAdd.push(createMemberRow(data[i]));

@@ -33,6 +33,10 @@
     color: inherit;
 }
 
+.btn.btn-primary.btn-lg.rookieButton {
+	margin-left: 27px;
+}
+
 .form-control.username {
     width: 238px;
 }
@@ -49,8 +53,12 @@
 	padding-right: 25px;
 }
 
-.container.newUser {
-	height: 535px;
+.container.newExpert {
+	height: 435px;
+}
+
+.container.newRookie {
+	height: 335px;
 }
 
 .container.viewAndUpdate {
@@ -80,30 +88,12 @@ h3 {
 	text-align: center;
 }
 
-.jumbotron.index {
+.jumbotron {
 	background-color: black;
 	color: white;
 	opacity: 0.8;
+	text-align: center;
 }
-
-.jumbotron.form {
-	background-color: black;
-	color: white;
-	opacity: 0.8;
-}
-
-.jumbotron.view {
-	background-color: black;
-	color: white;
-	opacity: 0.8;
-}
-
-.jumbotron.userAccount {
-	background-color: black;
-	color: white;
-	opacity: 0.8;
-}
-
 
 body {
 	background-repeat: no-repeat;
@@ -120,7 +110,7 @@ body.index {
 	background-image: url("../images/gymbuddy3.jpg");
 }
 
-body.view {
+body.proForm {
 	background-image: url("../images/gymbuddy2.jpg");
 }
 
@@ -254,33 +244,3 @@ button.edit {
 	padding: 6px 12px;
   }
   
-	/* Sticky footer styles
-  -------------------------------------------------- */
-  html {
-	  position: relative;
-	  min-height: 100%;
-	}
-	body {
-	  /* Margin bottom by footer height */
-	  margin-bottom: 60px;
-	  font-family: 'Raleway', sans-serif;
-	}
-	.footer {
-	
-	  position: absolute;
-	  bottom: 0;
-	  width: 100%;
-	  /* Set the fixed height of the footer here */
-	  height: 60px;
-	  background-color: #f5f5f5;
-  }
-  
-  /* USER HTML CSS */
-  body{
-  background-color: #efefef;
-  }
-  
-  .jumbotron {
-	  text-align: center;
-	  background-color: #cccccc
-  }

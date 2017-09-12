@@ -1,0 +1,161 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places"></script> -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+<body class= "user">
+  <!--   <a class="navbar-brand" href="#">
+            <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="GymBuds">
+            
+        </a> -->
+    <div class="jumbotron jumbotron-fluid userAccount">
+            <h1 class="display-1">Expert Account</h1>
+            <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="GymBuds"/>
+
+    </div>
+    <div class = "container main mapAndShedule">
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1 class="display-3">My Reservations</h1>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1 class="display-3">Choose A Gym Near You</h1>
+                <div class="pac-card" id="pac-card">
+                        <div>
+                          <div id="title">
+                            Autocomplete search
+                          </div>
+                          <div id="type-selector" class="pac-controls">
+                            <input type="radio" name="type" id="changetype-all" checked="checked">
+                            <label for="changetype-all">All</label>
+                  
+                            <input type="radio" name="type" id="changetype-establishment">
+                            <label for="changetype-establishment">Establishments</label>
+                  
+                            <input type="radio" name="type" id="changetype-address">
+                            <label for="changetype-address">Addresses</label>
+                  
+                            <input type="radio" name="type" id="changetype-geocode">
+                            <label for="changetype-geocode">Geocodes</label>
+                          </div>
+                          <div id="strict-bounds-selector" class="pac-controls">
+                            <input type="checkbox" id="use-strict-bounds" value="">
+                            <label for="use-strict-bounds">Strict Bounds</label>
+                          </div>
+                        </div>
+                        <div id="pac-container">
+                          <input id="pac-input" type="text"
+                              placeholder="Enter a location">
+                        </div>
+                      </div>
+                      <div id="map"></div>
+                      <div id="infowindow-content">
+                        <img src="" width="16" height="16" id="place-icon">
+                        <span id="place-name"  class="title"></span><br>
+                        Gym ID: <span id="place-id"  class="title"></span><br>
+                        <span id="place-address"></span>
+                    </div>
+            </div>
+        </div>  
+        <div class = "row">
+            <div class = "col-md-12">
+                <h1 class="display-3">Schedule A Workout</h1>
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="gymId">Gym ID</label>
+                <input type="text" class="form-control" id="gymId" placeholder="ChIJY9TAMwO7woARfm6h0NW_ycI">
+            </div>
+            <div class="form-group">
+                <label for="month">Month</label>
+                <select class="form-control" id="month">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+            <div class="form-group">
+                    <label for="day">Day</label>
+                    <select class="form-control" id="day">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Hour</label>
+                    <select class="form-control" id="time">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="am_pm">AM/PM</label>
+                    <select class="form-control" id="am_pm">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/beginner.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

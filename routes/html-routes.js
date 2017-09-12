@@ -17,14 +17,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  // new route loads new.html
-  app.get("/new", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/new.html"));
-  });
-
-  // login route loads login.html
-  app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+  // form route loads form.html
+  app.get("/form", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/form.html"));
   });
 
   // user route loads user.html
@@ -32,9 +27,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
-    // trainer route loads trainer.html
-  app.get("/trainer", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/trainer.html"));
+    // pro route loads pro.html
+  app.get("/pro", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/pro.html"));
+  });
+
+    // proform route loads proform.html
+  app.get("/proform", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/proform.html"));
   });
 
 };

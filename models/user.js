@@ -1,11 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Members = sequelize.define("Members", {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-      min: 1000
-    },
+  var Member = sequelize.define("Member", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -56,5 +50,5 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-    return Members;
+    return Member;
 };

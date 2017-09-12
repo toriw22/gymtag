@@ -2,7 +2,7 @@ $(document).ready(function() {
   /* global moment */
 
   // blogContainer holds all of our posts
-  var blogContainer = $(".blog-container");
+  var blogContainer = $(".member-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
@@ -11,30 +11,30 @@ $(document).ready(function() {
   var posts;
 
   // The code below handles the case where we want to get blog posts for a specific author
-  // Looks for a query param in the url for author_id
+  // Looks for a query param in the url for member_id
   var url = window.location.search;
-  var authorId;
-  if (url.indexOf("?author_id=") !== -1) {
-    authorId = url.split("=")[1];
-    getPosts(authorId);
+  var memberId;
+  if (url.indexOf("?member_id=") !== -1) {
+    memberId = url.split("=")[1];
+    getPosts(memberId);
   }
-  // If there's no authorId we just get all posts as usual
+  // If there's no memberId we just get all posts as usual
   else {
     getPosts();
   }
 
 
   // This function grabs posts from the database and updates the view
-  function getPosts(author) {
-    authorId = author || "";
-    if (authorId) {
-      authorId = "/?author_id=" + authorId;
+  function getPosts(member) {
+    memberId = author || "";
+    if (memberId) {
+      memberId = "/?member_id=" + memberId;
     }
-    $.get("/api/posts" + authorId, function(data) {
+    $.get("/api/posts" + memberId, function(data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
-        displayEmpty(author);
+        displayEmpty(member);
       }
       else {
         initializeRows();
@@ -79,9 +79,9 @@ $(document).ready(function() {
     editBtn.addClass("edit btn btn-info");
     var newPostTitle = $("<h2>");
     var newPostDate = $("<small>");
-    var newPostAuthor = $("<h5>");
-    newPostAuthor.text("Written by: " + post.Author.name);
-    newPostAuthor.css({
+    var newPostMember = $("<h5>");
+    newPostMember.text("Written by: " + post.Member.name);
+    newPostMember.css({
       float: "right",
       color: "blue",
       "margin-top":
@@ -97,7 +97,7 @@ $(document).ready(function() {
     newPostPanelHeading.append(deleteBtn);
     newPostPanelHeading.append(editBtn);
     newPostPanelHeading.append(newPostTitle);
-    newPostPanelHeading.append(newPostAuthor);
+    newPostPanelHeading.append(newPostMember);
     newPostPanelBody.append(newPostBody);
     newPostPanel.append(newPostPanelHeading);
     newPostPanel.append(newPostPanelBody);
@@ -128,7 +128,7 @@ $(document).ready(function() {
     var query = window.location.search;
     var partial = "";
     if (id) {
-      partial = " for Author #" + id;
+      partial = " for Member #" + id;
     }
     blogContainer.empty();
     var messageh2 = $("<h2>");

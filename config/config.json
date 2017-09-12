@@ -1,20 +1,20 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "Apr171990",
     "database": "gym_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Apr171990",
     "database": "gym_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
+    "username": "Apr171990",
     "password": null,
     "database": "gym_db",
     "host": "127.0.0.1",

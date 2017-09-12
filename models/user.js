@@ -1,17 +1,25 @@
 module.exports = function(sequelize, DataTypes) {
-    var Table = sequelize.define("Table", {
+    var Members = sequelize.define("Table", {
     id: {
         type: DataTypes.INTERGER,
         autoIncrement: true,
-        primaryKey: true
+        primaryKey: true,
+        min: 1000
         },
-      name: {
+      firstName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+        },
       type: {
         type: DataTypes.STRING,
         allowNull: false
@@ -19,23 +27,27 @@ module.exports = function(sequelize, DataTypes) {
       gym: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
         len: [1]
+        }
       },
-      location: {
-        type: DataTypes.STRING,
+      zipCode: {
+        type: DataTypes.INTEGER,
         allowNull: false,
-        len: [1]
+        validate:{
+        len: [5]
+        }
       },
       month: {
         type: DataTypes.STRING,
         allowNull: false
       },
       day: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
       },
       time: {
-        type: DataTypes.TIME,
+        type: DataTypes.STRING,
         allowNull: false
       },
       am_pm: {
@@ -43,5 +55,5 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       }
     });
-    return Table;
+    return Members;
   };

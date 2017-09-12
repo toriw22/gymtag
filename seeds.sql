@@ -1,0 +1,4 @@
+INSERT INTO Members (firstName, lastName, type, gym, zipCode, month, day, time, am_pm) VALUES ("Henry", "Davis", "User", "24 Hour Fitness", 92629, "September", "15","3", "PM");
+INSERT INTO Members (firstName, lastName, type, gym, zipCode, month, day, time, am_pm) VALUES ("Jessica", "Garcia", "Trainer", "LA Fitness", 92663, "September", "15","3", "PM");
+INSERT INTO Members (firstName, lastName, type, gym, zipCode, month, day, time, am_pm) VALUES ("Henry", "Davis", "User", "24 Hour Fitness", 90007, "September", "15","3", "PM");
+INSERT INTO Members (firstName, lastName, type, gym, zipCode, month, day, time, am_pm) VALUES ("Rhonda", "Lee", "User", "LA Fitness", 92646, "September", "16","6", "PM");

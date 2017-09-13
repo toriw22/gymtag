@@ -35,25 +35,11 @@
 	</form>
  	</div>
 	</div>	
+
+<script src="js/beginner_form.js" type="text/javascript"></script>  
 </body>
 </html>
 
 
-<script type="text/javascript"> 
-  $("#submit").on("click", function(event){
-    event.preventDefault();
-    var newRookie =  {
-      firstName: $(".firstNameField").val().trim(), 
-      lastName: $(".lastNameField").val().trim(),
-      userName: $(".userNameField").val().trim(),
-      photo: $(".photoField").val().trim(),
-    };
-      
-    console.log(newRookie);
-    
-    $.post("/newrookie", newRookie, function(data){
-        console.log(data);
 
-    });
-  });
-</script>
+

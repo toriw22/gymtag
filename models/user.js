@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Member = sequelize.define("Member", {
+  var Members = sequelize.define("Members", {
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -9,21 +9,21 @@ module.exports = function(sequelize, DataTypes) {
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }
     },
     userName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1]
       }
     },
     userType: {
        type: DataTypes.STRING,
-       allowNull: false
+       allowNull: true
     },
     photo: {
       type: DataTypes.STRING,
@@ -35,22 +35,22 @@ module.exports = function(sequelize, DataTypes) {
     },
     month: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     day: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     time: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     am_pm: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     }
 }, {
-      timestamps: false    
+      timestamps: true    
   });
-    return Member;
+    return Members;
 };

@@ -13,10 +13,10 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for User viewing their appointments
-  app.get("/beginner", function(req, res) {
+  app.get("/newUser", function(req, res) {
     db.Members.findAll({
       where: {
-        id: req.body.id
+        userType: "rookie"
       }
     }).then(function(results) {
       res.json(results);
@@ -27,7 +27,7 @@ module.exports = function(app) {
   app.get("/pro", function(req, res) {
     db.Members.findAll({
       where: {
-        id: req.body.id
+        userType: "expert"
       }
     }).then(function(results) {
       res.json(results);
@@ -40,20 +40,31 @@ module.exports = function(app) {
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
     db.Members.create({
-      name: req.body.name,
-      type: req.body.type,
-      gym: req.body.gym,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      userName: req.body.userName,
+      photo: req.body.photo,
+      userType: req.body.userType
     }).then(function(results) {
       // We have access to the new todo as an argument inside of the callback function
       res.json(results);
     })
-    .catch(function(err) {
-      // Whenever a validation or flag fails, an error is thrown
-      // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-      res.json(err);
-    });
   });
-
+app.post("/pro", function(req, res) {
+    // create takes an argument of an object describing the item we want to
+    // insert into our table. In this case we just we pass in an object with a text
+    // and complete property (req.body)
+    db.Members.create({
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      userName: req.body.userName,
+      photo: req.body.photo,
+      userType: req.body.userType
+    }).then(function(results) {
+      // We have access to the new todo as an argument inside of the callback function
+      res.json(results);
+    })
+  });
   // DELETE route for deleting todos. We can get the id of the todo to be deleted from
   // req.params.id
   // app.delete("/api/todos/:id", function(req, res) {

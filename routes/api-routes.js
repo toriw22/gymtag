@@ -65,22 +65,7 @@ app.post("/pro", function(req, res) {
       res.json(results);
     })
   });
-  // DELETE route for deleting todos. We can get the id of the todo to be deleted from
-  // req.params.id
-  // app.delete("/api/todos/:id", function(req, res) {
-  //   // We just have to specify which todo we want to destroy with "where"
-  //   db.Members.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(results) {
-  //     res.json(results);
-  //   });
-
-  // });
-
-  // PUT route for updating todos. We can get the updated todo data from req.body
-  app.put("/setappointment", function(req, res) {
+app.put("/setappointment", function(req, res) {
 
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
@@ -91,7 +76,7 @@ app.post("/pro", function(req, res) {
       am_pm: req.body.am_pm
     }, {
       where: {
-        id: req.body.id
+        userName: req.body.userName
       }
     }).then(function(results) {
       res.json(results);

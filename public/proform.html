@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Create an Expert Account</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-</head>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places"></script> -->
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
 
   <body class="form">
     
@@ -28,7 +28,34 @@
       <input class="form-control form-control-lg userNameField" type="text" placeholder="Username">
       <label><h2>Link to Photo</h2></label>
       <input class="form-control form-control-lg photoField" type="text" placeholder="https://i.pinimg.com/236x/0b/49/d4/0b49d43d28c5b76d9a9dd5199b62ad95--real-life-this-my-life.jpg">
-    
+      <label><h2>Gym ID</h2></label>
+      <input class="form-control form-control-lg gymIdField" type="text" placeholder="Search for a gym and then copy and paste the Gym ID into the field below!">
+      <div class = "row">
+        <div class = "col-md-12">
+            <h1 class="display-3">Choose A Gym Near You</h1>
+            <div class="pac-card" id="pac-card">
+                    <div>
+                      <div id="title">
+                        Autocomplete search
+                      </div>
+                      <div id="type-selector" class="pac-controls">
+                        <input type="radio" name="type" id="changetype-all" checked="checked">
+                        <label for="changetype-all">Gyms</label>
+
+                      <input id="pac-input" type="text"
+                      placeholder="Enter a location">
+                    </div>
+                    </div>
+                  </div>
+                  <div id="map"></div>
+                  <div id="infowindow-content">
+                    <img src="" width="16" height="16" id="place-icon">
+                    <span id="place-name"  class="title"></span><br>
+                    Gym ID: <span id="place-id"  class="title"></span><br>
+                    <span id="place-address"></span>
+                </div>
+        </div>
+    </div>      
       <br>
     <a class="btn btn-primary btn-lg" id="submit" role="button">Submit</a>     
 
@@ -36,5 +63,8 @@
   </div>
   </div>  
 
-<script src="js/pro_form.js" type="text/javascript"></script>  
+  <script src="js/beginner.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places&callback=initMap"
+  async defer></script>  
 </body>
+</html>

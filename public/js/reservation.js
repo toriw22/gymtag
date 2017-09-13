@@ -11,7 +11,7 @@ $("#submit").on("click", function(event){
       
     console.log(newReservation);
     
-    $.put("/setappointment", newReservation)
+    $.post("/setappointment", newReservation)
 
      .done(function(data) {
         console.log(data);

@@ -10,7 +10,7 @@ $("#submit").on("click", function(event){
       
     console.log(newExpert);
     
-    $.post("/newUser", newExpert)
+    $.post("/expert", newExpert)
 
      .done(function(data) {
         console.log(data);

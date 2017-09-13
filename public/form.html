@@ -34,22 +34,21 @@
 </body>
 </html>
 
+
 <script type="text/javascript"> 
   $("#submit").on("click", function(event){
     event.preventDefault();
-    var newFriend =  {
-      name: $(".nameField").val().trim(), 
+    var newRookie =  {
+      firstName: $(".firstNameField").val().trim(), 
+      lastName: $(".lastNameField").val().trim(),
+      userName: $(".userNameField").val().trim(),
       photo: $(".photoField").val().trim(),
-      scores: [
-        $(".questionOne").val(), 
-        $(".questionTwo").val()
-      ]
     };
       
-    console.log(newFriend);
+    console.log(newRookie);
     
-    $.post("/survey", newFriend, function(data){
-        alert("Finding your best match...");
+    $.post("/newrookie", newRookie, function(data){
+        console.log(data);
 
     });
   });

@@ -5,7 +5,7 @@ $("#submit").on("click", function(event){
       lastName: $(".lastNameField").val().trim(),
       userName: $(".userNameField").val().trim(),
       photo: $(".photoField").val().trim(),
-      userType: "rookie"
+      userType: "Rookie"
     };
       
     console.log(newRookie);

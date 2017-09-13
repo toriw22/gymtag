@@ -1,7 +1,7 @@
 $("#submit").on("click", function(event){
     event.preventDefault();
     var newReservation =  {
-      userName: $(".userNameField")
+      userName: $(".userNameField"),
       gym: $(".gymField").val().trim(), 
       month: $(".monthField").val().trim(),
       day: $(".dayField").val().trim(),
@@ -11,7 +11,7 @@ $("#submit").on("click", function(event){
       
     console.log(newReservation);
     
-    $.put("/setappointment", newReservation)
+    $.post("/setappointment", newReservation)
 
      .done(function(data) {
         console.log(data);
@@ -22,7 +22,6 @@ $("#submit").on("click", function(event){
       $(".monthField").val("");
       $(".dayField").val("");
       $(".am_pmField").val("");
-      $(".hourField").val("")
-    };
+      $(".hourField").val("");
   });
 

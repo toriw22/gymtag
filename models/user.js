@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
 }, {
-      timestamps: true    
+      timestamps: false    
   });
     return Members;
 };

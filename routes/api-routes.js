@@ -13,10 +13,10 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for User viewing their appointments
-  app.get("/newUser", function(req, res) {
+  app.get("/beginner", function(req, res) {
     db.Members.findAll({
       where: {
-        userType: "rookie"
+        userType: "Rookie"
       }
     }).then(function(results) {
       res.json(results);
@@ -27,7 +27,7 @@ module.exports = function(app) {
   app.get("/pro", function(req, res) {
     db.Members.findAll({
       where: {
-        userType: "expert"
+        userType: "Expert"
       }
     }).then(function(results) {
       res.json(results);
@@ -35,11 +35,11 @@ module.exports = function(app) {
   });
 
   // POST route for saving a new todo
-  app.post("/newUser", function(req, res) {
+  app.post("/rookie", function(req, res) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Members.create({
+    db.Rookie.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       userName: req.body.userName,
@@ -50,11 +50,11 @@ module.exports = function(app) {
       res.json(results);
     })
   });
-app.post("/pro", function(req, res) {
+app.post("/expert", function(req, res) {
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a text
     // and complete property (req.body)
-    db.Members.create({
+    db.Expert.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       userName: req.body.userName,
@@ -65,11 +65,12 @@ app.post("/pro", function(req, res) {
       res.json(results);
     })
   });
-app.put("/setappointment", function(req, res) {
+app.post("/setappointment", function(req, res) {
 
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
-    db.Members.update({
+    db.Appointment.create({
+      userName: req.body.userName,
       gym: req.body.gym,
       month: req.body.month,
       day: req.body.day,

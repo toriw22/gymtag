@@ -59,7 +59,6 @@
 
 .container.newExpert {
 	height: 1200px;
-	margin-bottom: 400px;
 }
 
 .container.newRookie {
@@ -103,20 +102,24 @@ body {
 	background-size: 100%
 }
 
-body.form { 
-	background-image: url("../images/gymbuddy.png");
-}
-
 body.index {
 	background-image: url("../images/gymbuddy3.jpg");
 }
 
-body.proForm {
+body.pro {
 	background-image: url("../images/gymbuddy2.jpg");
+}
+
+body.proForm {
+	background-image: url("../images/workout-partner.jpg");
 }
 
 body.user {
 	background-image: url("../images/workout-partner.jpg");
+}
+
+body.form {
+	background-image: url("../images/gymbuddy.png");
 }
 
 form#cms {

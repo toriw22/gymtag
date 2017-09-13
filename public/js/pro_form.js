@@ -1,6 +1,6 @@
 $("#submit").on("click", function(event){
     event.preventDefault();
-    var newRookie =  {
+    var newExpert =  {
       firstName: $(".firstNameField").val().trim(), 
       lastName: $(".lastNameField").val().trim(),
       userName: $(".userNameField").val().trim(),
@@ -8,9 +8,9 @@ $("#submit").on("click", function(event){
       userType: "expert"
     };
       
-    console.log(newRookie);
+    console.log(newExpert);
     
-    $.post("/newUser", newRookie)
+    $.post("/newUser", newExpert)
 
      .done(function(data) {
         console.log(data);

@@ -70,6 +70,7 @@ app.put("/setappointment", function(req, res) {
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
     db.Members.update({
+      gym: req.body.gym,
       month: req.body.month,
       day: req.body.day,
       time: req.body.time,
@@ -81,8 +82,5 @@ app.put("/setappointment", function(req, res) {
     }).then(function(results) {
       res.json(results);
     })
-    .catch(function(err) {
-      res.json(err);
-    });
   });
 };

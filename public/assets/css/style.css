@@ -37,6 +37,10 @@
 	margin-left: 27px;
 }
 
+.newLoginButton{
+	margin-top: 15px;
+}
+
 .form-control.username {
     width: 238px;
 }
@@ -59,11 +63,7 @@
 }
 
 .container.newRookie {
-	height: 435px;
-}
-
-.container.viewAndUpdate {
-	height: 345px;
+	height: 535px;
 }
 
 .container.viewAndUpdate {

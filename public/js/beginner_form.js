@@ -16,8 +16,8 @@ $("#submit").on("click", function(event){
         console.log(data);
 
     });
-      $(".firstNameField").val("");
-      $(".lastNameField").val("");
-      $(".userNameField").val("");
-      $(".photoField").val("");
+      // $(".firstNameField").val("");
+      // $(".lastNameField").val("");
+      // $(".userNameField").val("");
+      // $(".photoField").val("");
   });

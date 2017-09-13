@@ -16,7 +16,7 @@ module.exports = function(app) {
   app.get("/newUser", function(req, res) {
     db.Members.findAll({
       where: {
-        userType: "rookie"
+        userType: "Rookie"
       }
     }).then(function(results) {
       res.json(results);
@@ -27,7 +27,7 @@ module.exports = function(app) {
   app.get("/pro", function(req, res) {
     db.Members.findAll({
       where: {
-        userType: "expert"
+        userType: "Expert"
       }
     }).then(function(results) {
       res.json(results);

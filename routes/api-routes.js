@@ -70,17 +70,12 @@ app.post("/setappointment", function(req, res) {
 
     // Update takes in an object describing the properties we want to update, and
     // we use where to describe which objects we want to update
-    db.Appointment.create({
-      userName: req.body.userName,
+    db.Appointments.create({
       gym: req.body.gym,
       month: req.body.month,
       day: req.body.day,
       time: req.body.time,
       am_pm: req.body.am_pm
-    }, {
-      where: {
-        userName: req.body.userName
-      }
     }).then(function(results) {
       res.json(results);
     })

@@ -4,6 +4,7 @@ $(document).ready(function(){
     var lastNameField = $(".lastNameField");
     var userNameField = $(".userNameField");
     var photoField = $(".photoField");
+    var gymIdField = $(".gymIdField");
     var rookieForm = $("#rookieForm");
 
     $(rookieForm).on("submit", handleFormSubmit);
@@ -13,7 +14,8 @@ $(document).ready(function(){
       event.preventDefault();
 
       if(!firstNameField.val().trim() || !lastNameField.val().trim() || 
-          !userNameField.val().trim() || !photoField.val().trim()){
+          !userNameField.val().trim() || !photoField.val().trim() ||
+          !gymIdField.val().trim()){
               alert("Please fill out all the fields!");
               return;
       } 
@@ -23,6 +25,7 @@ $(document).ready(function(){
           lastName: lastNameField.val().trim(),
           userName: userNameField.val().trim(),
           photo: photoField.val().trim(),
+          gym: gymIdField.val().trim(),
           userType: "Rookie"
       };
       

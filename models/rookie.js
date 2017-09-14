@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     gym: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     }
   }, {
       timestamps: false    

@@ -1,6 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
-    var Appointments = sequelize.define("Appointments", {
-        month: {
+    var Appointments = sequelize.define("Appointments", {  
+      gym: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      month: {
         type: DataTypes.STRING,
         allowNull: false
       },
@@ -10,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       time: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull:  false
       },
       am_pm: {
         type: DataTypes.STRING,
@@ -20,10 +24,10 @@ module.exports = function(sequelize, DataTypes) {
         timestamps: false    
     });
   
-    Appointments.associate = function(models) {
-      models.Rookie.belongsToMany(models.Expert, { through: Appointments } );
-      models.Expert.belongsToMany(models.Rookie, { through: Appointments } );
-    };
+    // Appointments.associate = function(models) {
+    //   models.Rookie.belongsToMany(models.Expert, { through: Appointments } );
+    //   models.Expert.belongsToMany(models.Rookie, { through: Appointments } );
+    // };
   
       return Appointments;
   };

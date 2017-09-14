@@ -10,22 +10,19 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-
-<div class="jumbotron index">
-  <h1>Gym Buddy</h1>
-  <img src="assets/images/weight-logo.png"   class="d-inline-block align-top" alt="GymBuds"/>
-</div>
-
-
 <body class="index">
+	<div class="jumbotron index">
+	  <h1>Gym Buddy</h1>
+	  <a  href="index.html"><img src="assets/images/weight-logo.png" class="d-inline-block align-top" alt="GymBuds"/></a>
+	</div>
 	<div class="container newUserOrLogin">
 		<div class="container loginInput">
 			<label class="loginLabel">Username</label>
-    		<input class="form-control username" type="text">
-    		<input type="radio" name="typeOfUser" id="rookie"> Rookie
-    		<input type="radio" name="typeOfUser" id="expert" href="pro.html"> Expert<br>
-    		<label class="loginLabel">Password</label>
-    		<input class="form-control password" type="text">
+			<input class="form-control username" type="text">
+			<div class = "container rookieOrExpert">
+	    		<input type="radio" name="typeOfUser" id="rookie" > Rookie
+	    		<input type="radio" name="typeOfUser" id="expert" > Expert<br>
+	    	</div>
     	</div>
     	<div class="beginnerOrPro">
     		<a class="btn btn-primary btn-lg rookieButton" href="form.html" role="button">Rookie</a>

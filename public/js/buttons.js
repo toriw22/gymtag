@@ -11,7 +11,7 @@ $(".loginButton").on("click", function(event){
 });
 function newClickEvent(){
 	$(".newLoginButton").on("click", function(event) {
-		console.log("this works!");
+		var username = $(".username").val();
 		var expertRadio = document.getElementById("expert");
 		var rookieRadio = document.getElementById("rookie");
 		if (rookieRadio.checked) {
@@ -25,7 +25,7 @@ function newClickEvent(){
 		if (!expertRadio.checked && !rookieRadio.checked) {
 			alert("Please select Rookie or Expert.")
 		}
-	});
+	});	
 };
 $(".newUserButton").on("click", function(event){
 	event.preventDefault();

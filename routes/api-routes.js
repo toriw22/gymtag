@@ -44,7 +44,8 @@ module.exports = function(app) {
       lastName: req.body.lastName,
       userName: req.body.userName,
       photo: req.body.photo,
-      userType: req.body.userType
+      userType: req.body.userType,
+      gym: req.body.gym
     }).then(function(results) {
       // We have access to the new todo as an argument inside of the callback function
       res.json(results);

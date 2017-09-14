@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "Apr171990",
+    "password": "Pugluverg51",
     "database": "gym_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Pugluverg51",
     "database": "gym_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": null,
-    "password": null,
+    "username": "root",
+    "password": "Pugluverg51",
     "database": "gym_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

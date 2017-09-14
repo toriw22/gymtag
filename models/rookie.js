@@ -2,29 +2,20 @@ module.exports = function(sequelize, DataTypes) {
   var Rookie = sequelize.define("Rookie", {
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
-      // validate: {
-      //   len: [1]
-      // }
+      allowNull: false
     },
     lastName: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
+      allowNull: false
     },
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        len: [1]
-      }
+      unique: true
     },
     userType: {
        type: DataTypes.STRING,
-       allowNull: true
+       allowNull: false
     },
     photo: {
       type: DataTypes.STRING,
@@ -32,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     gym: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: false
     }
   }, {
       timestamps: false    

@@ -23,7 +23,7 @@ INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Don", "Johnson", "djohnson", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Tom", "Raymond", "traymond", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Jenna", "Philips", "jphilips", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sally", "Ericson", "sericson", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sally", "Ellis", "sellis", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
 
 
 SELECT * FROM gym_db.Experts;

@@ -77,14 +77,14 @@
           });
         }
 
-        setupClickListener('changetype-all', []);
-        setupClickListener('changetype-address', ['address']);
-        setupClickListener('changetype-establishment', ['establishment']);
-        setupClickListener('changetype-geocode', ['geocode']);
+        // setupClickListener('changetype-all', []);
+        // setupClickListener('changetype-address', ['address']);
+        // setupClickListener('changetype-establishment', ['establishment']);
+        // setupClickListener('changetype-geocode', ['geocode']);
 
-        document.getElementById('use-strict-bounds')
-            .addEventListener('click', function() {
-              console.log('Checkbox clicked! New state=' + this.checked);
-              autocomplete.setOptions({strictBounds: this.checked});
-            });
+        // document.getElementById('use-strict-bounds')
+        //     .addEventListener('click', function() {
+        //       console.log('Checkbox clicked! New state=' + this.checked);
+        //       autocomplete.setOptions({strictBounds: this.checked});
+        //     });
       }

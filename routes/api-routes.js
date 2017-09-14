@@ -13,8 +13,8 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for User viewing their appointments
-  app.get("/beginner", function(req, res) {
-    db.Members.findAll({
+  app.get("/rookie", function(req, res) {
+    db.Rookie.findAll({
       where: {
         userType: "Rookie"
       }
@@ -24,7 +24,7 @@ module.exports = function(app) {
   });
 
     // GET route for Trainer to see all appointments
-  app.get("/pro", function(req, res) {
+  app.get("/expert", function(req, res) {
     db.Members.findAll({
       where: {
         userType: "Expert"

@@ -14,8 +14,7 @@ $(document).ready(function(){
       event.preventDefault();
 
       if(!firstNameField.val().trim() || !lastNameField.val().trim() || 
-          !userNameField.val().trim() || !photoField.val().trim() ||
-          !gymIdField.val().trim()){
+          !userNameField.val().trim() || !gymIdField.val().trim()){
               alert("Please fill out all the fields!");
               return;
       } 

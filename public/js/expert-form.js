@@ -5,55 +5,55 @@ $(document).ready(function(){
     var userNameField = $(".userNameField");
     var photoField = $(".photoField");
     var gymIdField = $(".gymIdField");
-    var rookieForm = $("#rookieForm");
+    var expertForm = $("#expertForm");
 
-    $(rookieForm).on("submit", handleFormSubmit);
+    $(expertForm).on("submit", handleFormSubmit);
 
     function handleFormSubmit(event){
 
       event.preventDefault();
 
       if(!firstNameField.val().trim() || !lastNameField.val().trim() || 
-          !userNameField.val().trim() || !gymIdField.val().trim()){
+          !userNameField.val().trim()  || !gymIdField.val().trim()){
               alert("Please fill out all the fields!");
               return;
       } 
 
-      var newRookie = {
+      var newExpert = {
           firstName: firstNameField.val().trim(), 
           lastName: lastNameField.val().trim(),
           userName: userNameField.val().trim(),
           photo: photoField.val().trim(),
           gym: gymIdField.val().trim(),
-          userType: "Rookie"
+          userType: "Expert"
       };
-      
-      console.log(newRookie);
-      submitPost(newRookie);
+
+      console.log(newExpert);  
+      submitPost(newExpert);
     }
 
     function submitPost(post){
-      $.post("/rookie", post, function(){
-          window.location.href = "/user";
+      $.post("/expert", post, function(){
+          window.location.href = "/expert-schedule";
       });
     }
 })
 
 
-
 // $("#submit").on("click", function(event){
 //     event.preventDefault();
-//     var newRookie =  {
+//     var newExpert =  {
 //       firstName: $(".firstNameField").val().trim(), 
 //       lastName: $(".lastNameField").val().trim(),
 //       userName: $(".userNameField").val().trim(),
 //       photo: $(".photoField").val().trim(),
-//       userType: "Rookie"
+//       userType: "Expert",
+//       gym: $(".gymIdField").val().trim()
 //     };
       
-//     console.log(newRookie);
+//     console.log(newExpert);
     
-//     $.post("/rookie", newRookie)
+//     $.post("/expert", newExpert)
 
 //      .done(function(data) {
 //         console.log(data);

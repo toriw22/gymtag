@@ -25,7 +25,7 @@ module.exports = function(app) {
 
     // GET route for Trainer to see all appointments
   app.get("/expert", function(req, res) {
-    db.Members.findAll({
+    db.Expert.findAll({
       where: {
         userType: "Expert"
       }

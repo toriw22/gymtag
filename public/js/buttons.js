@@ -16,11 +16,11 @@ function newClickEvent(){
 		var rookieRadio = document.getElementById("rookie");
 		if (rookieRadio.checked) {
 			console.log("rookie radio checked!");
-			$(".newLoginButton").attr("href", "user.html");
+			$(".newLoginButton").attr("href", "rookie-schedule.html");
 		}
 		if (expertRadio.checked) {
 			console.log("expert radio checked!");
-			$(".newLoginButton").attr("href", "pro.html");
+			$(".newLoginButton").attr("href", "expert-schedule.html");
 		}
 		if (!expertRadio.checked && !rookieRadio.checked) {
 			alert("Please select Rookie or Expert.")

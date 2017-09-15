@@ -7,7 +7,7 @@ $(document).ready(function() {
     getReservations();
 
     function getReservations(){
-        $.get("/rookie", function(data){
+        $.get("/expert", function(data){
             console.log("Reservations", data);
             reservations = data;
             // if (!reservations || !reservations.length) {
@@ -36,7 +36,7 @@ $(document).ready(function() {
         var newResTitle = $("<h2>");
         var newResDate = $("<small>");
         var newResUser = $("<h5>");
-        newResUser.text("Reserved By Rookie: " + reservation.firstName + " " + reservation.lastName);
+        newResUser.text("Train With Expert: " + reservation.firstName + " " + reservation.lastName);
         newResUser.css({
             float: "right",
             color: "blue",
@@ -59,9 +59,6 @@ $(document).ready(function() {
         newResPanel.append(newResPanelBody);
         newResPanel.data("reservation", reservation);
         return newResPanel;
-
-
-
     }
 
 })

@@ -12,6 +12,7 @@ $(".loginButton").on("click", function(event){
 function newClickEvent(){
 	$(".newLoginButton").on("click", function(event) {
 		var username = $(".username").val();
+		localStorage.setItem('username', username);
 		var expertRadio = document.getElementById("expert");
 		var rookieRadio = document.getElementById("rookie");
 		if (rookieRadio.checked) {

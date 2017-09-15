@@ -34,6 +34,18 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/expert/:id/:gymId", function(req, res) {
+    console.log("THIS IS MY REQ:" + req.params.gymId);
+    db.Expert.findAll({
+      where: {
+        userType: "Expert",
+        gym: req.params.gymId
+      }
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
   // Show rookie appointments after submitting appointment form
   app.get("/rookie/:id", function(req, res) {
     db.Rookie.findAll({

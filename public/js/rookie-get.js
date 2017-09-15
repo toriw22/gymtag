@@ -7,23 +7,31 @@ $(document).ready(function() {
     
     var url = window.location.search;
     var rookieId;
-    if (url.indexOf("?rookie_id=") !== -1) {
-      rookieId = url.split("=")[1];
-      getReservations(rookieId);
+    if (url.indexOf("?rookie_id=") !== -1 && url.indexOf("&gym_id=") !== -1) {
+      rookieId = url.split("=")[1].split("&")[0];
+      gymId = url.split("=")[2];
+      console.log(rookieId);
+      console.log(gymId);
+      getReservations(rookieId, gymId);
+
     }
     // If there's no authorId we just get all posts as usual
     else {
       getReservations();
     }
 
-    function getReservations(rookie){
+    function getReservations(rookie, gym){
         console.log("rookie:" + rookie);
+        console.log("gym:" + gym);
         rookieId = rookie || "";
-        console.log("rookieId:" + rookie);
-        if(rookieId){
-            rookieId = "/?rookie_id=" + rookieId;
-        }
-        $.get("/expert" + rookieId, function(data){
+        gymId = gym || "";
+        console.log("rookieId:" + rookieId);
+        console.log("gymId:" + gymId);
+        // if(rookieId && gymId){
+        //     rookieId = "?rookie_id=" + rookieId;
+        //     gymId = "&gym_id=" + gymId;
+        // }
+        $.get("/expert/" + rookieId+ "/"+ gymId , function(data){
             console.log("Reservations", data);
             reservations = data;
             if (!reservations || !reservations.length) {

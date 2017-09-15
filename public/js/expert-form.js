@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     function submitPost(post){
       $.post("/expert", post, function(){
-          window.location.href = "/expert-schedule";
+          window.location.href = "/expert-schedule?expert_id=" + post.userName;
       });
     }
 })

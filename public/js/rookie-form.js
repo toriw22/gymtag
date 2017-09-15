@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     function submitPost(post){
       $.post("/rookie", post, function(){
-          window.location.href = "/rookie-schedule";
+          window.location.href = "/rookie-schedule?rookie_id=" + post.userName;
       });
     }
 })

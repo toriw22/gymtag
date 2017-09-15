@@ -33,6 +33,11 @@ $(document).ready(function() {
             newResPanel.addClass("panel panel-default");
             var newResPanelHeading = $("<div>");
             newResPanelHeading.addClass("panel-heading");
+
+            var editBtn = $("<button>");
+            editBtn.text("RESERVE");
+            editBtn.addClass("edit btn btn-info");
+
             var newResTitle = $("<h2>");
             var newResDate = $("<small>");
             var newResUser = $("<h5>");
@@ -51,7 +56,7 @@ $(document).ready(function() {
             newResBody.text(reservation.userType);
             newResDate.text(reservation.gym);
             newResTitle.append(newResDate);
-    
+            newResPanelHeading.append(editBtn);
             newResPanelHeading.append(newResTitle);
             newResPanelHeading.append(newResUser);
             newResPanelBody.append(newResBody);

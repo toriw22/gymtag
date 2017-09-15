@@ -64,6 +64,11 @@ $(document).ready(function() {
         newResPanel.addClass("panel panel-default");
         var newResPanelHeading = $("<div>");
         newResPanelHeading.addClass("panel-heading");
+
+        var editBtn = $("<button>");
+        editBtn.text("RESERVE");
+        editBtn.addClass("edit btn btn-info");
+
         var newResTitle = $("<h2>");
         var newResDate = $("<small>");
         var newResUser = $("<h5>");
@@ -82,7 +87,7 @@ $(document).ready(function() {
         newResBody.text(reservation.userType);
         newResDate.text(reservation.gym);
         newResTitle.append(newResDate);
-
+        newResPanelHeading.append(editBtn);
         newResPanelHeading.append(newResTitle);
         newResPanelHeading.append(newResUser);
         newResPanelBody.append(newResBody);
@@ -99,7 +104,7 @@ $(document).ready(function() {
     if (id) {
       partial = " for Rookie #" + id;
     }
-    blogContainer.empty();
+    resContainer.empty();
     var messageh2 = $("<h2>");
     messageh2.css({ "text-align": "center", "margin-top": "50px" });
     messageh2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +

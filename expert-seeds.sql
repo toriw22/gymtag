@@ -16,14 +16,14 @@ INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Erica", "Garcia", "egarcia", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Hilda", "Smith", "hsmith", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
 INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Spike", "Lee", "slee", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Bella", "Douglas", "bdouglas", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sophia", "Nicholas", "snicholas", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Rhonda", "Brown", "rbrown", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Morgan", "Gonzales", "mgonzales", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Don", "Johnson", "djohnson", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Tom", "Raymond", "traymond", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Jenna", "Philips", "jphilips", "Expert", "http://via.placeholder.com/150x150", "24 Hour Fitness");
-INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sally", "Ellis", "sellis", "Expert", "http://via.placeholder.com/150x150", "LA Fitness");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Bella", "Douglas", "bdouglas", "Expert", "http://via.placeholder.com/150x150", "4321");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sophia", "Nicholas", "snicholas", "Expert", "http://via.placeholder.com/150x150", "4321");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Rhonda", "Brown", "rbrown", "Expert", "http://via.placeholder.com/150x150", "4321");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Morgan", "Gonzales", "mgonzales", "Expert", "http://via.placeholder.com/150x150", "4321");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Don", "Johnson", "djohnson", "Expert", "http://via.placeholder.com/150x150", "1234");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Tom", "Raymond", "traymond", "Expert", "http://via.placeholder.com/150x150", "1234");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Jenna", "Philips", "jphilips", "Expert", "http://via.placeholder.com/150x150", "1234");
+INSERT INTO Experts (firstName, lastName, userName, userType, photo, gym) VALUES ("Sally", "Ellis", "sellis", "Expert", "http://via.placeholder.com/150x150", "1234");
 
 
 SELECT * FROM gym_db.Experts;

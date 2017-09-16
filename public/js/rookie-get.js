@@ -43,21 +43,6 @@ $(document).ready(function() {
         });
     }
 
-    // getReservations();
-
-    // function getReservations(){
-    //     $.get("/expert", function(data){
-    //         console.log("Reservations", data);
-    //         reservations = data;
-    //         // if (!reservations || !reservations.length) {
-    //         //     displayEmpty(author);
-    //         // }
-    //         // else {
-    //         initializeRows();
-    //         // }
-    //     })
-    // }
-
     function initializeRows(){
         resContainer.empty();
         var resToAdd = [];

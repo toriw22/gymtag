@@ -46,16 +46,28 @@ module.exports = function(app) {
     });
   });
 
-  // Show rookie appointments after submitting appointment form
-  app.get("/rookie/:id", function(req, res) {
+  app.get("/rookie/:id/:gymId", function(req, res) {
+    console.log("THIS IS MY REQ:" + req.params.gymId);
     db.Rookie.findAll({
       where: {
-        userName: req.params.userName
+        userType: "Rookie",
+        gym: req.params.gymId
       }
     }).then(function(results) {
       res.json(results);
     });
   });
+
+  // Show rookie appointments after submitting appointment form
+  // app.get("/rookie/:id", function(req, res) {
+  //   db.Rookie.findAll({
+  //     where: {
+  //       userName: req.params.userName
+  //     }
+  //   }).then(function(results) {
+  //     res.json(results);
+  //   });
+  // });
 
   // POST route for saving a new todo
   app.post("/rookie", function(req, res) {

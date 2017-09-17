@@ -1,7 +1,7 @@
 $("#submit").on("click", function(event){
     event.preventDefault();
     var newReservation =  {
-      // userName: $(".userNameField"),
+      // userName: $(".userNameField").val().trim(),
       gym: $(".gymField").val().trim(), 
       month: $(".monthField").val().trim(),
       day: $(".dayField").val().trim(),

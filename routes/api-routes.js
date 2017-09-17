@@ -23,7 +23,7 @@ module.exports = function(app) {
     });
   });
 
-    // GET route for Trainer to see all appointments
+  // GET route for Trainer to see all appointments
   app.get("/expert", function(req, res) {
     db.Expert.findAll({
       where: {
@@ -71,9 +71,6 @@ module.exports = function(app) {
 
   // POST route for saving a new todo
   app.post("/rookie", function(req, res) {
-    // create takes an argument of an object describing the item we want to
-    // insert into our table. In this case we just we pass in an object with a text
-    // and complete property (req.body)
     db.Rookie.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -82,14 +79,11 @@ module.exports = function(app) {
       userType: req.body.userType,
       gym: req.body.gym
     }).then(function(results) {
-      // We have access to the new todo as an argument inside of the callback function
       res.json(results);
     })
   });
+  
 app.post("/expert", function(req, res) {
-    // create takes an argument of an object describing the item we want to
-    // insert into our table. In this case we just we pass in an object with a text
-    // and complete property (req.body)
     db.Expert.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -98,14 +92,10 @@ app.post("/expert", function(req, res) {
       userType: req.body.userType,
       gym: req.body.gym
     }).then(function(results) {
-      // We have access to the new todo as an argument inside of the callback function
       res.json(results);
     })
   });
 app.post("/setappointment", function(req, res) {
-
-    // Update takes in an object describing the properties we want to update, and
-    // we use where to describe which objects we want to update
     db.Appointments.create({
       gym: req.body.gym,
       month: req.body.month,
@@ -116,4 +106,14 @@ app.post("/setappointment", function(req, res) {
       res.json(results);
     })
   });
+
+  app.get("/appointments", function(req, res) {
+    
+        db.Expert.findAll({
+          // where: query,
+          // include: [db.Appointments]
+        }).then(function(results) {
+          res.json(results);
+        });
+      });
 };

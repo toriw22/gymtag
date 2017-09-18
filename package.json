@@ -4,7 +4,7 @@
   "description": "gym application",
   "main": "server.js",
   "scripts": {
-    "test": "This works",
+    "test": "jest",
     "start": "node server.js"
   },
   "repository": {
@@ -20,6 +20,14 @@
   "bugs": {
     "url": "https://github.com/gymtag/gymtag/issues"
   },
+  "jest": {
+    "automock": false,
+    "verbose": true,
+    "collectCoverageFrom": [
+        "routes/api-routes.js"
+    ],
+    "collectCoverage": true
+  },
   "homepage": "https://github.com/gymtag/gymtag#readme",
   "dependencies": {
     "body-parser": "^1.18.0",
@@ -28,5 +36,11 @@
     "method-override": "^2.3.9",
     "mysql2": "^1.4.2",
     "sequelize": "^4.8.3"
+  },
+  "devDependencies": {
+    "jest": "^21.1.0",
+    "nightmare": "^2.10.0",
+    "supertest": "^3.0.0",
+    "supertest-as-promised": "^4.0.2"
   }
 }

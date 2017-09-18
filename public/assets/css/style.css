@@ -19,7 +19,7 @@
 .login {
 	margin-top: 60px;
 	width: 300px;
-	height: 200px;
+	height: 285px;
 }
 
 .loginLabel {
@@ -37,7 +37,7 @@
 }
 
 .newLoginButton{
-	margin-top: -115px;
+	margin-top: 20px;
 }
 
 .form-control.username {

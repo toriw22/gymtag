@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes) {
     userName: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
+      primaryKey: true
     },
     userType: {
        type: DataTypes.STRING,
@@ -19,7 +20,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     photo: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      defaultValue: "http://via.placeholder.com/318x180"
     },
     gym: {
       type: DataTypes.STRING,

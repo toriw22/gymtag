@@ -19,8 +19,8 @@
     </div>
     <div class = "container main mapAndShedule">
         <div class = "row">
-            <div class = "col-xl-12">
-                <h1 class="display-5">Choose From These Appointments:</h1>
+            <div class = "col-xl-12 userWelcome">
+                <h1 class="display-5">Reserve a Workout with an Expert:</h1>
                 <div class="row">
                     <div class="col-xl-12 reservation-container">
                     </div>
@@ -67,13 +67,17 @@
                 <h1 class="display-3">Schedule A Workout</h1>
             </div>
         </div>
-        <form>
+        <form class = "rookieScheduleForm">
             <div class="form-group">
             <label><h2>User Name</h2></label>
             <input class="form-control form-control-lg userNameField" type="text" placeholder="User Name">
             <div class="form-group">
                 <label for="gymId">Gym ID</label>
                 <input type="text" class="form-control gymField" id="gymId" placeholder="ChIJY9TAMwO7woARfm6h0NW_ycI">
+            </div>
+            <div class="form-group">
+                <label>Photo ID</label>
+                <input type="text" class="form-control photoField" id="photoId" placeholder="http://s2.dmcdn.net/I4ZTE/320x180-LqO.jpg">
             </div>
             <div class="form-group">
                 <label for="month">Month</label>
@@ -149,11 +153,12 @@
                         <option>PM</option>
                     </select>
                 </div>
-                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg submit" id="submit">Submit</button>
+                <!-- <button type="submit" id="submit" class="btn btn-primary">Submit</button> -->
         </form>
     </div>
     <script src="js/rookie-apts.js"></script>
-    <script src="js/appointments-form.js"></script>
+    <script src="js/rookie-schedule-form.js"></script>
     <script src="js/google-maps-api.js"></script>
     <script src="js/rookie-get.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAgV0UI3EmyvGaJuo9EBkV2YVhKzHGUo4&libraries=places&callback=initMap"

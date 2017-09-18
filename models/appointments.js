@@ -5,10 +5,10 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true,
       autoIncrement: true
     },
-    // userName: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
-    // },
+    userName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     month: {
       type: DataTypes.STRING,
       allowNull: false
@@ -28,6 +28,11 @@ module.exports = function(sequelize, DataTypes) {
     gym: {
     type: DataTypes.STRING,
     allowNull: false
+    },
+    photo: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "http://via.placeholder.com/318x180"
     }
 }, {
       timestamps: false    
@@ -47,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
       through: Appointments 
     }, { 
       foreignKey: { 
-        allowNull: true 
+        allowNull: true, 
       }, 
       onDelete: 'CASCADE' 
     }); 

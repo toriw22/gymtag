@@ -155,6 +155,8 @@ button.edit {
 .card {
 	display: block;
 	float: left;
+	margin-bottom: 5px;
+	height: calc(37%);
 }
 
 .blog {

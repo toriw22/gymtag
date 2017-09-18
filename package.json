@@ -24,7 +24,7 @@
     "automock": false,
     "verbose": true,
     "collectCoverageFrom": [
-        "routes/api-routes.js"
+        "routes/html-routes.js"
     ],
     "collectCoverage": true
   },

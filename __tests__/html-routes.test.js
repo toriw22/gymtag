@@ -10,20 +10,20 @@ beforeAll(function (done) {
 	});
 });
 
-describe("get /rookie", function() {
-	test("it should return a json rookie object", function() {
-		return request(serverRequire.app).get("/rookie")
-		.then(function (res) {
-			console.log(res.body);
-		});
-	});
-});
-
 describe("get /index", function() {
 	test("it should return an html page", function() {
 		return request(serverRequire.app).get("/index")
 		.then(function () {
 			console.log("index works");
+		});
+	});
+});
+
+describe("get /rookie-form", function() {
+	test("it should return an html page", function() {
+		return request(serverRequire.app).get("/rookie-form")
+		.then(function () {
+			console.log("rookie-form works");
 		});
 	});
 });

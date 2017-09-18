@@ -22,10 +22,10 @@ function handleFormSubmit(event){
 
 	event.preventDefault();
 
-	if(!username.val().trim()){
-		alert("Please fill out all the fields!");
-		return;
-	}
+	// if(!username.val().trim()){
+	// 	alert("Please fill out all the fields!");
+	// 	return;
+	// }
 	var returningUser = {
 		username: username.val().trim()
 	}
@@ -45,9 +45,9 @@ function submitPost(post){
 			console.log("expert radio checked!");
 			window.location.href = "/expert-schedule?expert_id=" + post.username;
 		}
-		if (!expertRadio.checked && !rookieRadio.checked) {
-			alert("Please select Rookie or Expert.")
-		}
+		// if (!expertRadio.checked && !rookieRadio.checked) {
+		// 	alert("Please select Rookie or Expert.")
+		// }
 
   }
 })

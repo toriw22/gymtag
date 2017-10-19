@@ -1,6 +1,6 @@
 # Gym Buddy
 
-Gym Buddy is an app that connects beginner gym goers with more experienced gym goers. This gives beginners have a chance to learn from more experienced individuals without paying for a trainer.
+Gym Buddy is an app that connects beginner gym goers with more experienced gym goers. This gives beginners a chance to learn from more experienced individuals without paying for a trainer.
 
 * New users are prompted to create a "Rookie" account or an "Expert" account.
 * After selecting whether the new user is a "Rookie" or "Expert", the user is redirected to a form where they can enter their personal information.
